@@ -1,5 +1,9 @@
 
 def main ():
+	try:
+		f = open('nimet.txt', 'a')
+	except f == EOF:
+		f = open('nimet.txt', 'w')
 	nimi =str(raw_input("Anna nimesi: "))
 	f = open ('nimet.txt','a')
 	f.write(nimi + '\n')
