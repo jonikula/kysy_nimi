@@ -1,8 +1,12 @@
 
 def main ():
-	nimi = raw_input("Anna nimesi: ")
-	f = open ('nimet.txt','r+')
+	nimi =str(raw_input("Anna nimesi: "))
+	f = open ('nimet.txt','a')
+	f.write(nimi + '\n')
+	f.close()
+	f = open('nimet.txt', 'r')
 	print 'Listassa on seuraavat nimet:\n'
-	f.read()
-
+	for names in f.readlines():
+		print names
+	f.close()
 main()
