@@ -4,6 +4,7 @@ def main ():
 		f = open('nimet.txt', 'a')
 	except f == EOF:
 		f = open('nimet.txt', 'w')
+		f.close()
 	nimi =str(raw_input("Anna nimesi: "))
 	f = open ('nimet.txt','a')
 	f.write(nimi + '\n')
@@ -13,4 +14,5 @@ def main ():
 	for names in f.readlines():
 		print names
 	f.close()
+	print "Now wasn't that awesome?"
 main()
